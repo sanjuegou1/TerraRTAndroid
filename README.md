@@ -48,22 +48,53 @@ repositories {
 Then you must include the library and the coroutines library in your app level gradle file(`build.gradle(:app)`) by adding the following lines under `dependencies`:
 
 ```gradle
-implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2'
-implementation files('libs/TerraRTAndroid-alpha.aar')
-
-```
-
-For example:
-```gradle
-dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2'
     implementation files('libs/TerraRTAndroid-alpha.aar')
-}
+    
+    //Needed for functionality of the SDK
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2'
+    implementation ("com.google.android.gms:play-services-fitness:21.0.1")
+    implementation ("com.google.android.gms:play-services-auth:20.2.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation 'com.github.polarofficial:polar-ble-sdk:3.3.1'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.3'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation "com.google.code.gson:gson:2.8.7"
 ```
+Under `repositories` in `settings.gradle`, please also add:
+
+```gradle
+  maven { url 'https://jitpack.io' }
+```
+
 
 You may now import classes from the library as: `import co.tryterra.terrartandroid.(Every class in this library imaginable (except private ones))`
+
+### Extra Steps
+
+For Google Fit, please register your project package name from your `AndroidManifest.xml` file with [Google API](https://console.cloud.google.com). You will need to create a new project and a new set of Oauth credentials within this page. When creating the project, you will also need to consider scopes needed for the project. Enable Fitness API and People API, and select the following scopes:
+
+**People API**
+- openid
+- /auth/user.birthday.read
+- /auth/user.emails.read
+- /auth/user.gender.read
+- /auth/userinfo.email
+- /auth/userinfo.profile
+
+**Fitness API**
+- /auth/fitness.activity.read
+- /auth/fitness.blood_glucose.read
+- /auth/fitness.blood_pressure.read
+- /auth/fitness.body.read
+- /auth/fitness/heart_rate.read
+- /auth/fitness.body_temperature.read
+- /auth/fitness.location.read
+- /auth/fitness.nutrition.read
+- /auth/fitness.oxygen_saturation.read
+- /auth/fitness.reproductive_health.read
+- /auth/fitness.sleep.read
+
+Finish creating the OAuth Credentials as required and you should be able to start developing with Google Fit!
 
 ## Usage
 
