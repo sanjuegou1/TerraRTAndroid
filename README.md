@@ -8,6 +8,22 @@ This packages uses Bluetooth Low Energy (BLE) and Bluetooth services. Thus only 
 
 The package streams real time data through **Websockets** and is hosted by us! You can learn more about it here on our [docs](https://docs.tryterra.co/reference/using-the-websocket-api).
 
+The data streamed to your websocket connection (as a developer) will follow the following format:
+
+```json
+{
+  "op":5,
+  "d":
+    {
+      "ts": <String> (In ISOFormat Date Form)
+       "val": <Double>
+    },
+    "uid": <String> (user ID)
+    "seq":9536,
+    "t": <String> (Datatype name: Exactly the same as the name of `DataTypes` enum)
+}
+```
+
 ## Installation
 
 Download the `.aar` file from this repository and include it within the `app/libs` folder in your project structure. You may now add it as a dependency in your gradle configuration files. In your project level gradle file (`build.gradle(:Project)`), edit the `repositories` to include:
