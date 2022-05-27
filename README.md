@@ -2,13 +2,13 @@
 
 The time is here! We are letting you test out our Real Time Streaming Features!
 
-# A Worthy Note
+## A Worthy Note
 
 This packages uses Bluetooth Low Energy (BLE) and Bluetooth services. Thus only devices that support these can use the library! These will be requested as permissions upon initialisation of the package.
 
 The package streams real time data through **Websockets** and is hosted by us! You can learn more about it here on our [docs](https://docs.tryterra.co/reference/using-the-websocket-api).
 
-# Installation
+## Installation
 
 Download the `.aar` file from this repository and include it within the `app/libs` folder in your project structure. You may now add it as a dependency in your gradle configuration files. In your project level gradle file (`build.gradle(:Project)`), edit the `repositories` to include:
 
@@ -49,7 +49,7 @@ dependencies {
 
 You may now import classes from the library as: `import co.tryterra.terrartandroid.(Every class in this library imaginable (except private ones))`
 
-# Usage
+## Usage
 
 The package revolves mainly around a single class: `TerraRT`. 
 
@@ -74,7 +74,7 @@ terraRT = TerraRT(
 - `referenceId: String` => The reference ID you wish to assign to this user (usually your server's ID for this user)
 
 
-## Initialisation Connections
+### Initialising Connections
 
 After initialisation of this class, you can initialise different connections.
 
@@ -110,7 +110,7 @@ This will cause Bluetooth connection widget will pop up asking you to select the
 The callback is to check whether the connection is successful or not. **Please wait for the callback before proceeding!**
 
 
-## Streaming Data (WOOOO)
+##$ Streaming Data (WOOOO)
 
 Here comes the fun part. You can now simply start streaming data by running
 
@@ -132,7 +132,7 @@ terraRT.stopRealtime(type: Connections)
 **N.B Streaming from WEAR OS is handled on the Watch itself!!**
 
 
-## Disconnecting
+##$ Disconnecting
 
 Finally, disconnecting a device is done as:
 
