@@ -148,7 +148,7 @@ terraRT.stopRealtime(type: Connections)
 **N.B Streaming from WEAR OS is handled on the Watch itself!!**
 
 
-##$ Disconnecting
+### Disconnecting
 
 Finally, disconnecting a device is done as:
 
