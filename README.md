@@ -19,7 +19,7 @@ The data streamed to your websocket connection (as a developer) will follow the 
        "val": <Double>
     },
     "uid": <String> (user ID)
-    "seq":9536,
+    "seq": <Int>,
     "t": <String> (Datatype name: Exactly the same as the name of `DataTypes` enum)
 }
 ```
