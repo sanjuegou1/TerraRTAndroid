@@ -55,17 +55,8 @@ Then you must include the library and the coroutines library in your app level g
     implementation ("com.google.android.gms:play-services-fitness:21.0.1")
     implementation ("com.google.android.gms:play-services-auth:20.2.0")
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation 'com.github.polarofficial:polar-ble-sdk:3.3.1'
-    implementation 'io.reactivex.rxjava3:rxjava:3.1.3'
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation "com.google.code.gson:gson:2.8.7"
 ```
-Under `repositories` in `settings.gradle`, please also add:
-
-```gradle
-  maven { url 'https://jitpack.io' }
-```
-
 
 You may now import classes from the library as: `import co.tryterra.terrartandroid.(Every class in this library imaginable (except private ones))`
 
@@ -138,8 +129,7 @@ terraRT.initConnection(connection: Connections, context: Context, googleFitPermi
 
 Currently supported Connections:
 
-- Polar Straps (BLE)
-- Wahoo Straps (BLE)
+- BLE (includes Polar, Wahoo, and **XIAOMI Bands**!!!)
 - Google Fit (SDK Stream)
 - Wear OS (Bluetooth) **(Please check out our [WearOS SDK](https://github.com/tryterra/TerraWearOS) for this!)**
 
