@@ -117,7 +117,7 @@ This will cause Bluetooth connection widget will pop up asking you to select the
 The callback is to check whether the connection is successful or not. **Please wait for the callback before proceeding!**
 
 
-##$ Streaming Data (WOOOO)
+### Streaming Data (WOOOO)
 
 Here comes the fun part. You can now simply start streaming data by running
 
