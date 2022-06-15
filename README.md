@@ -26,39 +26,9 @@ The data streamed to your websocket connection (as a developer) will follow the 
 
 ## Installation
 
-Download the `.aar` file from this repository and include it within the `app/libs` folder in your project structure. You may now add it as a dependency in your gradle configuration files. In your project level gradle file (`build.gradle(:Project)`), edit the `repositories` to include:
+The library is part of mavenCentral!
 
-```gradle
-flatDir{
-  dirs 'libs'
-}
-```
-
-For example:
-```gradle
-repositories {
-    google()
-    mavenCentral()
-    flatDir {
-        dirs 'libs'
-    }
-}
-```
-
-Then you must include the library and the coroutines library in your app level gradle file(`build.gradle(:app)`) by adding the following lines under `dependencies`:
-
-```gradle
-    implementation files('libs/TerraRTAndroid-alpha.aar')
-    
-    //Needed for functionality of the SDK
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2'
-    implementation ("com.google.android.gms:play-services-fitness:21.0.1")
-    implementation ("com.google.android.gms:play-services-auth:20.2.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation "com.google.code.gson:gson:2.8.7"
-```
-
-You may now import classes from the library as: `import co.tryterra.terrartandroid.(Every class in this library imaginable (except private ones))`
+You may import it in your app gradle file as: `implementation co.tryterra:terra-rtandroid:0.0.1`
 
 ### Extra Steps
 
