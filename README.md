@@ -28,7 +28,7 @@ The data streamed to your websocket connection (as a developer) will follow the 
 
 The library is part of mavenCentral!
 
-You may import it in your app gradle file as: `implementation co.tryterra:terra-rtandroid:0.0.1`
+You may import it in your app gradle file as: `implementation co.tryterra:terra-rtandroid:0.0.2`
 
 ### Extra Steps
 
