@@ -121,7 +121,7 @@ terraRT.initConnection(connection: Connections, context: Context, googleFitPermi
 
 Currently supported Connections:
 
-- BLE (includes Polar, Wahoo, and **XIAOMI Bands**!!!)
+- BLE (includes Garmin HR Broadcasts, Polar, Wahoo, **XIAOMI Bands** and more!!!)
 - Google Fit (SDK Stream)
 - Wear OS (Bluetooth) **(Please check out our [WearOS SDK](https://github.com/tryterra/TerraWearOS) for this!)**
 
