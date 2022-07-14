@@ -130,20 +130,27 @@ Currently supported Connections:
 - BLE (includes Garmin HR Broadcasts, Polar, Wahoo, **XIAOMI Bands** and more!!!)
 - Google Fit (SDK Stream)
 - Wear OS (Bluetooth) **(Please check out our [WearOS SDK](https://github.com/tryterra/TerraWearOS) for this!)**
+- ANT+ (Includes Garmin HR Broadcasts, and ANT+ Supported fitness equipments!)
 
 Upon running this `initConnection` function, any necessary permission request will be requested.
 
-For Bluetooth/BLE related connections, you will also be required to run 
+- For Bluetooth/BLE related connections, you will also be required to run 
+
 ```kotlin
 terraRT.startBluetoothScan(type: Connections, callback: (Boolean) -> Unit)
 ```
 
-`type: Connections` => The same `Connections` enum as before!
+`type: Connections` => The same `Connections` enum as before! However this function will only take connections that uses Bluetooth: `Connections.BLE` and `Connections.WEAR_OS`
 
 This will cause Bluetooth connection widget will pop up asking you to select the Bluetooth device you wish to connect to. **Connecting to any other devices will simply fail if not supported!**
 
 The callback is to check whether the connection is successful or not. **Please wait for the callback before proceeding!**
 
+- For ANT+ related connections, you can do something similar to BLE connections by running
+
+```kotlin
+terraRT.startAntPlusScan(callback: (Boolean) -> Unit)
+```
 
 ### Streaming Data (WOOOO)
 
