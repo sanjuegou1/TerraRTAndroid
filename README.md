@@ -152,6 +152,8 @@ The callback is to check whether the connection is successful or not. **Please w
 terraRT.startAntPlusScan(callback: (Boolean) -> Unit)
 ```
 
+**N.B You will have to download 2 plugins from ANT+ services to use this function, otherwise the connections will return false in the callback (Error logs will be printed). You can find the 2 plugins here: [Ant+ Plugins Service](https://play.google.com/store/apps/details?id=com.dsi.ant.plugins.antplus&hl=en_GB&gl=US) and [Ant Radio Service](https://play.google.com/store/apps/details?id=com.dsi.ant.service.socket&hl=en_GB&gl=US)** 
+
 ### Streaming Data (WOOOO)
 
 Here comes the fun part. You can now simply start streaming data by running
