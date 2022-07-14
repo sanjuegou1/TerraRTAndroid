@@ -2,6 +2,12 @@
 
 The time is here! We are letting you test out our Real Time Streaming Features!
 
+##Quick Start
+
+A demo app can be found here to get you started quickly!
+
+https://github.com/tryterra/TerraRTAndroid-Demo
+
 ## A Worthy Note
 
 This packages uses Bluetooth Low Energy (BLE) and Bluetooth services. Thus only devices that support these can use the library! These will be requested as permissions upon initialisation of the package.
