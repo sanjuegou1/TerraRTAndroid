@@ -2,7 +2,7 @@
 
 The time is here! We are letting you test out our Real Time Streaming Features!
 
-##Quick Start
+## Quick Start
 
 A demo app can be found here to get you started quickly!
 
@@ -56,7 +56,7 @@ Datatypes:
 
 The library is part of mavenCentral!
 
-You may import it in your app gradle file as: `implementation co.tryterra:terra-rtandroid:0.0.2`
+You may import it in your app gradle file as: `implementation co.tryterra:terra-rtandroid:0.1.1`
 
 ### Extra Steps
 
@@ -93,22 +93,12 @@ You will need to initialise one as follows:
 
 ```kotlin
 terraRT = TerraRT(
-  userId: String = USERID,
-  xAPIKey: String = XAPIKEY,
-  devId: String = DEVID,
   context: Context = this,
-  referenceId: String? = REFERENCE_ID
 )
 ```
 
 **Arguments**:
-
-- `userId: String` => This is the Terra User ID you wish to stream real time from.
-- `xAPIKey: String` => The X-API-KEY Terra provides to you when you sign up and pay for our subscription (on our [dashboard](https://dashboard.tryterra.co).
-- `devId: String` => The dev-id Terra provides to you wish your subscription
 - `context: Context` => The app context for which you call this function from (usually from a class that extends from `Activity` types)
-- `referenceId: String` => The reference ID you wish to assign to this user (usually your server's ID for this user)
-
 
 ### Initialising Connections
 
@@ -159,12 +149,13 @@ terraRT.startAntPlusScan(callback: (Boolean) -> Unit)
 Here comes the fun part. You can now simply start streaming data by running
 
 ```kotlin
-terraRT.startRealtime(type: Connections, dataTypes: DataTypes)
+terraRT.startRealtime(type: Connections, token: String, dataTypes: DataTypes)
 ```
 
 **Arguments**
 
 - `connection: Connections` => This argument takes a `Connections` enum, indicating the connection you wish to start realtime for
+- `token: String` => This argument is a token for verification of the user to connect to Terra's websocket API. You may generate one from the docs as shown [here](https://docs.tryterra.co/reference/terrartandroid)
 - `dataTypes: DataTypes` => This argument takes a `DataTypes` enum indicating the datatype you wish to stream for. 
 
 Similarly now, you may stop real time streaming:
